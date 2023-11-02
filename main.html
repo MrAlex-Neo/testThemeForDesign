@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <link
+        href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css"
+        rel="stylesheet"
+        /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&family=Raleway:wght@300&family=Sedgwick+Ave+Display&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <header class="burger">
+        <div class="menu-btn">
+            <span></span>
+            <span class="hat"></span>
+            <span></span>
+        </div>
+        <img src="./img/Design Cloud.svg" alt="">
+    </header>
+    <div class="menu">
+        <nav class="categoryForMenuBurger">
+            <ul class="categoryForMenuBurgerUp">
+                <li class="activeLi"><img src="./img/burgerIcons/provider.svg" alt=""><p>Поставщики</p></li>
+                <li class="activeLi"><img src="./img/burgerIcons/armchair.svg" alt=""><p>Барахолка</p></li>
+                <hr>
+                <li class="activeLi"><img src="./img/burgerIcons/news.svg" alt=""><p>Новости</p></li>
+                <li class="activeLi"><img src="./img/burgerIcons/account.svg" alt=""><p>Личный кабинет</p></li>
+            </ul>
+            <ul>
+                <li class="activeLi"><img src="./img/burgerIcons/plus.svg" alt=""><p>Запросить товар</p></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="mainBox">
+            <div class="unBurgerBox">
+                <nav class="categoryForMenuBurger">
+                    <ul class="categoryForMenuBurgerUp">
+                        <li class="lableForLiForBurger"><img class="firstImgLable" src="./img/burgerIcons/DC.svg" alt=""><img class="secondImgLable none" src="./img/Design Cloud.svg"></img></li>
+                        <li class="activeLiMenuBurger activeLi"  id="providerCategory"><img src="./img/burgerIcons/provider.svg" alt=""><p class="none">Поставщики</p></li>
+                        <li class="activeLi"  id="marketCategory"><img src="./img/burgerIcons/armchair.svg" alt=""><p class="none">Барахолка</p></li>
+                        <li class="activeLi"><img src="./img/burgerIcons/armchair.svg" alt=""><p class="none">Барахолка</p></li>
+                        <hr>
+                        <li class="activeLi"><img src="./img/burgerIcons/news.svg" alt=""><p class="none">Новости</p></li>
+                        <li class="activeLi"><img src="./img/burgerIcons/account.svg" alt=""><p class="none">Личный кабинет</p></li>
+                    </ul>
+                    <ul class="ulLastLiForBurger">
+                        <li class="lastLiForBurger activeLi"><img src="./img/burgerIcons/plus.svg" alt=""><p class="none">Запросить товар</p></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mainBoxInThisContainer">
+                <div class="categoryBox">
+                    <div class="headerBoxH2andSpan">
+                        <h2>Поставщики</h2>
+                        <span>(13)</span>
+                        
+                    </div>
+                    <div class="searchCategory">
+                        <div class="multiselect Daddy" id="multiselectDaddy">
+                            <input type="text" id="multiselect-input" class="inputStyleForAll multiselect-input" placeholder="Выберите варианты" readonly>
+                            <ul class="multiselect-options none" id="multiselect-options">
+                                <!-- Другие категории -->
+                            </ul>
+                        </div>
+                        
+                        <div class="filterBox" >
+                            <div class="filterBtn inputStyleForAll" tabindex="0">
+                                <p>Фильтры</p>
+                                <img src="./img/mainPage/filter.svg" alt="">
+                            </div>
+                            <div class="filterBoxBody none">
+                                <div class="multiselect-options">
+                                    <!-- <div class="multiselect Sonny" id="multiselectSonny">
+                                        <input type="text" id="multiselectSonny-input" class="inputStyleForAll multiselect-input" placeholder="Выберите варианты" readonly>
+                                        <ul class="multiselect-options Sonny none" id="multiselectSonny-options">
+                                        </ul>
+                                    </div> -->
+                                    <div class="multiselect">
+                                        <input type="text" id="filterBoxChooseTown-input" class="inputStyleForAll townInput" placeholder="Выберите варианты" readonly>
+                                        <ul class="filterBoxChooseTown suboptions none" id="filterBoxChooseTown">
+                                        </ul>
+                                    </div>
+                                    <div class="multiselect">
+                                        <input type="text" id="filterBoxChooseState-input" class="inputStyleForAll stateInput" placeholder="По умолчанию" readonly>
+                                        <ul class="filterBoxChooseState suboptions none" id="filterBoxChooseState">
+                                            <li class="inputCheck liState liStyle" data-index="1">
+                                                <p>По умолчанию</p><img class="none" src="./img/Ok.svg" alt="">
+                                            </li>
+                                            <li class="inputCheck liState liStyle" data-index="2">
+                                                <p>По добавлениям в избранное</p><img class="none" src="./img/Ok.svg" alt="">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="checkShowRoom threeBox">
+                                        <input id="check1" type="checkbox" name="check" value="check1">
+                                        <label for="check1"></label>
+                                        <p>Есть шоурум</p>
+                                    </div>
+                                    <div class="checkShowRoom threeBox">
+                                        <input id="check2" type="checkbox" name="check" value="check2">
+                                        <label for="check2"></label>
+                                        <p>Готов отправить образцы</p>
+                                    </div>
+                                    <div class="checkShowRoom threeBox">
+                                        <input id="check3" type="checkbox" name="check" value="check3">
+                                        <label for="check3"></label>
+                                        <p>Только избранные</p>
+                                    </div>
+                                    <hr>
+                                    <div class="threeBox cleanAll">
+                                        <img src="./img/mainPage/cleanAll.svg" alt="">
+                                        <p>Сбросить все</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="infoBodyForCategories">
+                        <div class="providerPlace">
+                            <div class="infoBodyForProviderCategory ">
+                                
+                            </div>
+                        </div>
+                        <div class="marketPlace none">
+                            <div class="infoBodyForMarketCategory ">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

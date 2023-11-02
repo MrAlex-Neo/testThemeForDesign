@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Cloud</title>
+    <link rel="stylesheet" href="./css/registration.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@600&family=Raleway:wght@300&family=Sedgwick+Ave+Display&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+    <script src="./js/registration.js" type="module"></script>
+</head>
+<body>
+    <div class="logo">
+        <img src="./img/Design Cloud.svg" alt="">
+    </div>
+    <section class="registrationRoles none contentBlock" data-step="1">
+        <div class="joinBox">
+            <h3>Присоединяйтесь</h3>
+            <div class="userSelection">
+                <div class="joinDesigner" id="designerBox">
+                    <div class="circle"></div>
+                    <div class="joinSmallBox">
+                        <div><img src="./img/search.svg" alt=""></div>
+                        <div>
+                            <p>Я дизайнер/архитектор, ищу поставщика для своего проекта</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="joinProvider" id="providerBox">
+                    <div class="circle"></div>
+                    <div class="joinSmallBox">
+                        <div><img src="./img/sofa.svg" alt=""></div>
+                        <div>
+                            <p>Я поставщик, хочу найти покупателя своей продукции</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="joinButtons">
+                <div class="createBtn Btn">
+                    <button class="Btn" type="submit" id="createAccountBtn" disabled>Создать аккаунт</button>
+                </div>
+                <div class="logIn">
+                    <p>Уже есть аккаунт?</p>
+                    <p class="ligInHandler getAuthProcess">Войдите</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="registrationMain none contentBlock">
+        <div class="regFormBox">
+            <div id="regBoxOne" class="regBoxOne">
+                <div class="RegFirstPart  joinBox">
+                    <div class="RegPartHeader">
+                        <div class="RegPartHeaderH3">
+                            <h3>Регистрация</h3>
+                            <p class="regPartSign">1/4</p>
+                        </div>
+                        <h5>Подтверждение телефона</h5>
+                    </div>
+                    <div class="input-container registration">
+                        <input type="tel" id="phone" name="phone" maxlength="12" required>
+                        <label for="phone">Телефон</label>
+                    </div>
+                    <div class="joinButtons">
+                        <div class="createBtn Btn">
+                            <button class="Btn" id="createPhoneBtn" disabled>Продолжить</button>
+                        </div>
+                        <div class="logIn">
+                            <p>Уже есть аккаунт?</p>
+                            <p class="ligInHandler getAuthProcess">Войдите</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="getLastWindowPlease">
+                    <p>Назад</p>
+                </div>
+            </div>
+            <div id="regBoxTwo" class="regBoxTwo none">
+                <div class="RegSecondPart joinBox">
+                    <div class="RegPartHeader">
+                        <div class="RegPartHeaderH3">
+                            <h3>Регистрация</h3>
+                            <p class="regPartSign">2/4</p>
+                        </div>
+                        <h5>Юридическая информация</h5>
+                    </div>
+                    <div class="inputBox">
+                        <h5>Формат деятельности</h5>
+                        <div class="inputBoxList">
+                            <div class="chooseInput private">
+                                <p>Частный дизайнер</p>
+                            </div>
+                            <div class="chooseInput company">
+                                <p>Дизайн-агентство</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="organizForm none">
+                        <div class="joinBox">
+                            <div class="privateBranch">
+                                <div class="inputBox">
+                                    <h5>Организационная форма</h5>
+                                    <div class="inputBoxList">
+                                        <div class="chooseInput self">
+                                            <p>Самозанятый</p>
+                                        </div>
+                                        <div class="chooseInput ip">
+                                            <p>ИП</p>
+                                        </div>
+                                        <div class="chooseInput ooo">
+                                            <p>ООО</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <h5>Название организации</h5>
+                                <div class="input-container userNameCompany">
+                                    <input type="text" name="userNameCompany" id="userNameCompany"  required>
+                                </div>
+                            </div>
+                            
+                            <div class="inputBox">
+                                <div class="joinButtons">
+                                    <div class="createBtn Btn">
+                                        <button class="Btn" id="finishTwoPartPrivateRegistr" disabled>Продолжить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="getLastWindowPlease">
+                    <p>Назад</p>
+                </div>
+            </div>
+            <div id="regBoxTwoForProvider" class="regBoxTwoForProvider none">
+                <div class="RegSecondPart joinBox">
+                    <div class="RegPartHeader">
+                        <div class="RegPartHeaderH3">
+                            <h3>Регистрация</h3>
+                            <p class="regPartSign">2/3</p>
+                        </div>
+                        <h5>Юридическая информация</h5>
+                    </div>
+                    <div class="joinBox">
+                        <div class="inputBox">
+                            <h5>Название организации</h5>
+                            <div class="input-container userNameCompanyProvider">
+                                <input type="text" name="userNameCompanyProvider" id="userNameCompanyProvider"  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <h5>Город нахождения главного офиса</h5>
+                        <div class="input-container">
+                            <div class="input-container">
+                                <select name="typeProjects" id="cityDepartments">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkBoxListForProviderTwoPartReg none">
+                        <div class="inputBox">
+                            <h5>Ваше участие в организации</h5>
+                            <div class="inputBoxList" id="providerRolesList">
+                                <div class="chooseInput">
+                                    <p>Владелец / учредитель</p>
+                                </div>
+                                <div class="chooseInput">
+                                    <p>Директор / управленец</p>
+                                </div>
+                                <div class="chooseInput">
+                                    <p>Руководитель отдела продаж</p>
+                                </div>
+                                <div class="chooseInput">
+                                    <p>Менеджер</p>
+                                </div>
+                                <div class="chooseInput">
+                                    <p>Другое</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lastBoxForTwoPartRegistrationProvider none">
+                        <div class="joinBox">
+                            <div class="inputBox">
+                                <h5>Должность</h5>
+                                <div class="input-container">
+                                    <input type="text" id="userPosition" name="userPosition" required>
+                                </div>
+                            </div>
+                            <div class="inputBox">
+                                <h5>ФИО</h5>
+                                <div class="input-container">
+                                    <input type="text" id="userFullName" name="userFullName" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="joinButtons">
+                            <div class="createBtn Btn">
+                                <button class="Btn" id="finishTwoPartProviderRegistr" disabled>Продолжить</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="getLastWindowPlease">
+                    <p>Назад</p>
+                </div>
+            </div>
+            <div id="regBoxThreeForProvider" class="regBoxThreeForProvider none">
+                <div class="RegSecondPart joinBox">
+                    <div class="RegPartHeader">
+                        <div class="RegPartHeaderH3">
+                            <h3>Регистрация</h3>
+                            <p class="regPartSign">3/3</p>
+                        </div>
+                        <h5>О продукции</h5>
+                    </div>
+                    <div class="inputBox">
+                        <h4>Категории товаров</h4>
+                        <h5>Выберите категории товаров, которые будут отображаться дизайнерам в вашей карточке поставщика. Всего можно указать три категории. </h5>
+                        <div class="multiselect" id="multiselect">
+                            <input type="text" id="multiselect-input" placeholder="Выберите варианты">
+                              <ul class="multiselect-options none" id="multiselect-options">
+                                  <li class="inputCheck" data-index="0">
+                                      <p data-index="0">Ремонт и строительство</p>
+                                      <ul class="suboptions none" data-index="0">
+                                          <li><div class="liContent"><h6>Стройматериалы</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Инструменты</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Сантехника, водоснабжение и сауна</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Двери</h6><img class="none" src="./img/Ok.svg" alt=""></li>
+                                          <li><div class="liContent"><h6>Садовая техника</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Окна и балконы</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Камины и обогреватели</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Готовые строения и срубы</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Потолки</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                      </ul>
+                                  </li>
+                                  <!-- <input type="checkbox" class="checkElem" value="Инструменты"> -->
+                                  <li class="inputCheck" data-index="1">
+                                      <p data-index="1">Мебель и интерьер</p>
+                                      <ul class="suboptions none" data-index="1">
+                                          <li><div class="liContent"><h6>Кровати, диваны и кресла</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Шкафы, комоды и стеллажи</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Столы и стулья</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Текстиль и ковры</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Кухонные гарнитуры</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Предметы интерьера, искусство</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Освещение</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Компьютерные столы и кресла</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Подставки и тумбы</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Другое</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                      </ul>
+                                  </li>
+                                  <li class="inputCheck" data-index="2">
+                                      <p data-index="2">Бытовая техника</p>
+                                      <ul class="suboptions none" data-index="2">
+                                          <li><div class="liContent"><h6>Для кухни</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Для дома</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Климатическое оборудование</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Для индивидуального ухода</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Другое</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                      </ul>
+                                  </li>
+                                  <li class="inputCheck"  data-index="3">
+                                      <p data-index="3">Растения</p>
+                                      <ul class="suboptions none" data-index="3">
+                                          <li><div class="liContent"><h6>Живые растения</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Вертикальные сады</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Искусственные растения</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                      </ul>
+                                  </li>
+                                  <li class="inputCheck" data-index="4">
+                                      <p data-index="4">Посуда и товары для кухни</p>
+                                      <ul class="suboptions none" data-index="4">
+                                          <li><div class="liContent"><h6>Сервировка стола</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Приготовление пищи</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Хранение продуктов</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Приготовление напитков</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Хозяйственные товары</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Кухонные аксессуары</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                          <li><div class="liContent"><h6>Другое из категории «Посуда и товары для кухни»</h6><img class="none" src="./img/Ok.svg" alt=""></div></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </div>
+                    </div>
+                    <hr>
+                    <div class="inputBox">
+                        <h4>Шоурум</h4>
+                        <p class="regBoxFourLinksWords">У вас есть шоурум?</p>
+                        <div class="">
+                            <div class="form_radio">
+                                <input id="radio-5" type="radio" name="showrooms" value="1" >
+                                <label for="radio-5">Да</label>
+                            </div>
+                            
+                            <div class="form_radio">
+                                <input id="radio-6" type="radio" name="showrooms" value="2" checked>
+                                <label for="radio-6">Нет</label>
+                            </div>
+                        </div>
+                        <div class="thingsRadioAssent none">
+                            <div class="inputBox">
+                                <p class="regBoxFourLinksWords">Вы готовы отправить образец товара?</p>
+                                <div class="">
+                                    <div class="form_radio">
+                                        <input id="radio-7" type="radio" name="things" value="1" >
+                                        <label for="radio-7">Да</label>
+                                    </div>
+                                    
+                                    <div class="form_radio">
+                                        <input id="radio-8" type="radio" name="things" value="2" checked>
+                                        <label for="radio-8">Нет</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="linksRadioAssent none">
+                            <div class="joinBox">
+                                <div class="inputBox">
+                                    <p class="regBoxFourLinksWords">Укажите адреса ваших шоурумов</p>
+                                    <div class="inputBox linkBoxArray" id="linkShowrooms">
+                                        <div class="input-container linkShow">
+                                            <h5>Ссылка:</h5>
+                                            <input type="text" data-index="0" required>
+                                        </div>
+                                    </div>
+                                    <div class="inputBoxList boxFour">
+                                        <div class="chooseInput" id="createLinkShowroomsBox">
+                                            <p>Добавить ссылку +</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="inputBox Show">
+                                    <h4>Шоурум</h4>
+                                    <p class="regBoxFourLinksWords">Укажите минимальное и максимальное значение скидки для дизайнеров, а так же расскажите про условия для её получиения</p>
+                                    <p class="ShowroomDiscountLabel">Размер скидки, %</p>
+                                    <div class="inputBox ShowroomDiscount">
+                                        <div class="input-container ShowroomDiscountChild">
+                                            <input type="text" placeholder="от">
+                                        </div>
+                                        <div class="input-container ShowroomDiscountChild">
+                                            <input type="text" placeholder="до">
+                                        </div>
+                                    </div>
+                                    <div class="input-container aboutUserProjectChild">
+                                        <h5>Условия получения скидки</h5>
+                                        <textarea type="text"></textarea> 
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="inputBox Show">
+                                    <h4>Подробная информация</h4>
+                                    <p class="regBoxFourLinksWords">Расскажите дизайнерам о вашей организации и продукции. Эта информация появится в вашей карточке на витрине поставщиков </p>
+                                    <div class="input-container aboutUserProjectChild">
+                                        <h5>Подробная информация</h5>
+                                        <textarea type="text"></textarea> 
+                                    </div>
+                                </div>
+                                <div class="inputBox joinButtons projects">
+                                    <div class="createBtn Btn">
+                                        <button class="Btn" id="finishRegBoxThreeForProvider">Зарегистрироваться</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="getLastWindowPlease">
+                    <p>Назад</p>
+                </div>
+            </div>
+            <div id="regBoxThree" class="regBoxThree none">
+                <div class="RegThirthPart joinBox">
+                    <div class="RegPartHeader">
+                        <div class="RegPartHeaderH3">
+                            <h3>Регистрация</h3>
+                            <p class="regPartSign">3/4</p>
+                        </div>
+                        <h5>Личные данные</h5>
+                    </div>
+                    <div class="avaDefault uImg">
+                        <label for="fileInput">
+                            <img id="userAva" src="./img/Ava.svg" alt="">
+                            <div class="avaDownload">
+                                <img src="./img/avaDownload.svg" alt="">
+                            </div>
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="inputBox">
+                        <h5>ФИО</h5>
+                        <div class="input-container">
+                            <input type="text" id="userName" name="userName" required>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <h5>Город</h5>
+                        <div class="input-container">
+                            <input type="text" id="userCity" name="userCity" required>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <h5>Типы проектов</h5>
+                        <div class="input-container">
+                            <select name="typeProjects" id="typeProjects">
+                                <option disabled selected>Выберите тип проекта:</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="joinButtons">
+                        <div class="createBtn Btn">
+                            <button class="Btn" id="finishThreePartPrivateRegistr" disabled>Продолжить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="getLastWindowPlease">
+                    <p>Назад</p>
+                </div>
+            </div>
+            <div id="regBoxFour" class="regBoxFour none">
+                <div class="RegFourthPart joinBox">
+                    <div class="RegPartHeader">
+                        <div class="RegPartHeaderH3">
+                            <h3>Регистрация</h3>
+                            <p class="regPartSign">4/4</p>
+                        </div>
+                        <h5>Профессиональные данные</h5>
+                    </div>
+                    <div class="inputBox">
+                        <h4>Социальные сети</h4>
+                        <p class="regBoxFourLinksWords">Укажите ссылки на ваши рабочие страницы в интернете</p>
+                        <div class="inputBox linkBoxArray" id="linkBoxArray">
+                            <div class="input-container link">
+                                <h5>Ссылка:</h5>
+                                <input type="text" data-index="0" required>
+                            </div>
+                        </div>
+                        <div class="inputBoxList boxFour">
+                            <div class="chooseInput" id="createLinkRegBoxFour">
+                                <p>Добавить ссылку +</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="inputBox">
+                        <h4>Образование</h4>
+                        <p class="regBoxFourLinksWords">У вас есть профильное образование?</p>
+                        <div class="">
+                            <div class="form_radio">
+                                <input id="radio-1" type="radio" name="education" value="1" >
+                                <label for="radio-1">Да</label>
+                            </div>
+                            
+                            <div class="form_radio">
+                                <input id="radio-2" type="radio" name="education" value="2" checked>
+                                <label for="radio-2">Нет</label>
+                            </div>
+                        </div>
+                        <div class="educationRadioAssent none">
+                            <p class="regBoxFourLinksWords">Приложите документы подтверждающие наличие образование (сканы или фото диплома, сертификата и т.п.):</p>
+                            <div class="educationFiles avaDefault">
+                                <label for="userEducation" class="educationImgLabel">
+                                    <img class="userDoc downloadDiplomIng" src="./img/downloadFile.svg" alt="">
+                                </label>
+                                <input type="file" id="userEducation" accept="image/*" style="display: none" multiple>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <div class="inputBox">
+                        <h4>Портфолио</h4>
+                        <div class="">
+                            <div class="form_radio">
+                                <input id="radio-3" type="radio" name="partfolio" value="1" >
+                                <label for="radio-3">Да</label>
+                            </div>
+                            <div class="form_radio">
+                                <input id="radio-4" type="radio" name="partfolio" value="2" checked>
+                                <label for="radio-4">Нет</label>
+                            </div>
+                        </div>
+                        <div class="projectsRadioAssent none">
+                            <div class="inputBox projectsBoxArray" id="projectsBoxArray">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-title">Проект №1</div>
+                                        <div class="accordion-content">
+                                            <p class="regBoxFourLinksWords">Загрузите фотографии проекта</p>
+                                            <div class="projectFiles avaDefault">
+                                                <label for="userProject" class="projectsImgLabel">
+                                                    <img class="userDoc downloadProjectImg" src="./img/downloadFile.svg" alt="">
+                                                </label>
+                                                <input type="file" id="userProject" accept="image/*" style="display: none" multiple>
+                                            </div>
+                                            <div class="inputBox aboutUserProject">
+                                                <div class="input-container aboutUserProjectChild">
+                                                    <h5>Тип объекта</h5>
+                                                    <input type="text">
+                                                </div>
+                                                <div class="input-container aboutUserProjectChild">
+                                                    <h5>Стиль</h5>
+                                                    <input type="text">
+                                                </div>
+                                                <div class="input-container aboutUserProjectChild">
+                                                    <h5>Площадь объекта, кв.м.</h5>
+                                                    <input type="text">
+                                                </div>
+                                                <div class="input-container aboutUserProjectChild">
+                                                    <h5>Стоимость дизайн-проекта, ₽</h5>
+                                                    <input type="text">
+                                                </div>
+                                            </div>
+                                            <div class="input-container aboutUserProjectChild">
+                                                <h5>Описание проекта</h5>
+                                                <textarea type="text"></textarea> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inputBoxList projects boxFour">
+                                <div class="chooseInput projects" id="createProgectRegBoxFour">
+                                    <p>Добавить другой проект +</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="joinButtons projects">
+                        <div class="createBtn Btn">
+                            <button class="Btn" id="finishFourPartPrivateRegistr">Продолжить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="getLastWindowPlease">
+                    <p>Назад</p>
+                </div>
+            </div>
+            <div id="regBoxFIve" class="none">
+                <div class="RegFivePart joinBox">
+                    <h3>Успешно!</h3>
+                    <h5>Ваша заявка отправлена на модерацию! В течении 24 часов вам придёт смс-уведомление о результатах модерации</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="authorizationBox contentBlock">
+        <div class="joinBox">
+            <div class="RegPartHeader">
+                <div class="RegPartHeaderH3">
+                    <h3>Авторизация</h3>
+                </div>
+                <h5>Подтверждение телефона</h5>
+            </div>
+            <div class="input-container authorization">
+                <input type="tel" id="phoneAuth" name="phoneAuth" maxlength="12" required>
+                <label id="labelAuthTel" for="phoneAuth">Телефон</label>
+            </div>
+            <div class="checkCodeTel none">
+                <div class="input-container">
+                    <input type="tel" id="checkTelAuth" name="checkTelAuth" required>
+                    <label id="labelCheckAuthTel" for="checkTelAuth">Введите код</label>
+                    <div class="logIn getTheCodeAgain">
+                        <p>Выслать код повторно</p>
+                    </div>
+                </div>
+            </div>
+            <div class="joinButtons">
+                <div class="createBtn Btn">
+                    <button class="Btn" id="createPhoneBtnAuth" disabled>Продолжить</button>
+                </div>
+                <div class="logIn">
+                    <p>Нет аккаунта?</p>
+                    <p class="ligInHandler" id="getRegProcess">Зарегистрируйтесь</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>

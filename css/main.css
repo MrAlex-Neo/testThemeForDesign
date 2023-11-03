@@ -709,18 +709,19 @@ input:focus {
 /* контейнер барахолыча /начало */
 .infoBodyForMarketCategory {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 17px;
-  width: calc(61vw + 87px);
+  width: calc(61vw + 97px);
 }
 .marketCategoryBox {
   display: flex;
   flex-direction: column;
-  width: 222px;
+  width: 260px;
 }
 .marketCategoryBox img {
   border-radius: 8px;
-  width: 222px;
+  width: 260px;
   height: 196px;
   margin-bottom: 16px;
 }
